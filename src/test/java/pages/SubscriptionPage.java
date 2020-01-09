@@ -54,6 +54,6 @@ public class SubscriptionPage implements PageMaker{
 	}
 	
 	public String getConfirmationMessage() {
-		return driverFactory.waitForElement(confirmationMessage).getAttribute("Value");
+		return driverFactory.waitForElement(confirmationMessage).getText();
 	}
 }

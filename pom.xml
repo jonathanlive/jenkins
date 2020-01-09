@@ -17,6 +17,13 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>santander.com.br</groupId>
+			<artifactId>utilities</artifactId>
+			<version>1.1</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/Resources/utilities.jar</systemPath>
+		</dependency>
+		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>4.0.9</version>
