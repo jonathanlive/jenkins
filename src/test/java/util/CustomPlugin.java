@@ -121,7 +121,7 @@ public class CustomPlugin implements EventListener, PageMaker {
 
 	private void finishStep(TestStepFinished event) {
 		if (event.testStep instanceof PickleStepTestStep) {
-			String filename = projectFolder + "\\target\\screenshots\\" + createRandomFileName(".png");
+			String filename = projectFolder + "\\target\\" + createRandomFileName(".png");
 			String filepath =  ExtentReportUtil.getInstance().captureImage(Helper.getInstance().getDriver(), filename);
 	
 			if (event.result.getStatus().equals(Result.Type.PASSED)) {
