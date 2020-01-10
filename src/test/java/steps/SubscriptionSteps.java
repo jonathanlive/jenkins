@@ -32,13 +32,13 @@ public class SubscriptionSteps {
 
     @Then("^The subscription will be sent sucessful$")
     public void the_subscription_will_be_sent_sucessful() throws Throwable {
+    	subscriptionPage.clickBtnSendSubscription();
     	String validMessage = "Pronto! Agora é só checar seu email.";
     	Assert.assertEquals(validMessage, subscriptionPage.getConfirmationMessage());
     }
 
     @And("^Fill the form with my name(.+) and identification(.+) and my email(.+)$")
     public void fill_the_form_with_my_name_and_identification_and_my_email(String name, String identification, String email) throws Throwable {
-    	subscriptionPage.fillSubscriptionForm(name, identification, email);
-    	subscriptionPage.clickBtnSendSubscription();
+    	subscriptionPage.fillSubscriptionForm(name, identification, email);    	
     }	
 }
