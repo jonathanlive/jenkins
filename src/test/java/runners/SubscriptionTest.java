@@ -4,7 +4,7 @@ import java.io.IOException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import br.com.santander.utilities.DriverFactory;
+import core.Helper;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
@@ -25,6 +25,6 @@ public class SubscriptionTest {
 	
 	@AfterClass
 	public static void tearDown() throws IOException {
-		DriverFactory.getInstance().closeDriver();
+		Helper.getInstance().getDriver().quit();
 	}
 }

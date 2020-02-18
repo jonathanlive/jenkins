@@ -9,7 +9,7 @@ import util.Base;
 
 public class SubscriptionPage implements PageMaker{
 	
-	@FindBy(how = How.XPATH, using = "//*[@id=\"widget-nav-toggle-button\"]")
+	@FindBy(how = How.CSS, using = "#widget-nav-toggle-button")
 	WebElement btnSubscribe;	
 	
 	@FindBy(how = How.CSS, using = "#field-name")
@@ -30,7 +30,7 @@ public class SubscriptionPage implements PageMaker{
 	@FindBy(how = How.CSS, using = "#widget-panel > form > div.style__FormActions-sc-68njna-2.cTueib > button")
 	WebElement btnSendSubscription;	
 	
-	@FindBy(how = How.CSS, using = "#widget-panel > div.style__Container-sc-11vbf2p-0.jlrlfU > div.style__Head-sc-11vbf2p-2.ffnfLP > p")
+	@FindBy(how = How.CSS, using = "#widget-panel > div.Container-hitqxg-0.fkNIQQ > p")
 	WebElement confirmationMessage;	
 	
 	public void openHomepage() {
